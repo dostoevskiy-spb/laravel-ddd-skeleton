@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Components\User;
 
 use Common\Models\AuthEntity;
-use Components\AccountManager\AccountManager;
-use Components\MediaBuyer\MediaBuyer;
 use Components\User\Models\Status;
-use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -23,9 +20,9 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @property string password
  *
  * @property Status status
- * @property MediaBuyer|AccountManager entity
+ * @property User entity
  */
-class User extends AuthEntity implements JWTSubject, Authenticatable
+class User extends AuthEntity implements JWTSubject
 {
     public $timestamps = false;
 

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Http\Versions\v1\Presenters;
+namespace Components\User\Http\Versions\Open\v1\Presenters;
 
-use Common\Presenters\JsonPresenter;
+use Common\Presenters\SimplePresenter;
 
-class TokenPresenter extends JsonPresenter
+class TokenPresenter extends SimplePresenter
 {
     /**
      * @var string

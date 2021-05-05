@@ -1,10 +1,10 @@
 <?php
 
-namespace Components\User\Http\Versions\v1\Presenters;
+namespace Components\User\Http\Versions\Open\v1\Presenters;
 
-use Common\Presenters\JsonPresenter;
+use Common\Presenters\CollectionPresenter;
 
-class LogoutPresenter extends JsonPresenter
+class LogoutPresenter extends CollectionPresenter
 {
     protected function getPresentationData(): array
     {

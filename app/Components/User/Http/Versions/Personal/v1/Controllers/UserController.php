@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Http\Versions\v1\Controllers;
+namespace Components\User\Http\Versions\Personal\v1\Controllers;
 
 use Common\Controllers\Controller;
 use Components\User\Interfaces\UserServiceInterface;
-use Components\User\Versions\v1\Presenters\UserPresenter;
+use Components\User\Http\Versions\Admin\v1\Presenters\UserPresenter;
 use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller
@@ -37,6 +37,7 @@ class UserController extends Controller
     {
         $user = $this->service->getCurrent();
 
-        return (new UserPresenter($user))->present();
+        return (new UserPresenter($user))
+            ->present();
     }
 }

@@ -3,5 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'User\Versions'], function (): void {
-    include dirname(__DIR__) . '/Versions/v1/Routes/list.php';
+    include dirname(__DIR__) . '/Versions/Admin/v1/Routes/list.php';
+    include dirname(__DIR__) . '/Versions/Open/v1/Routes/list.php';
+    include dirname(__DIR__) . '/Versions/Personal/v1/Routes/list.php';
 });

@@ -163,6 +163,12 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Component Service Providers...
+         */
+        Components\User\Providers\UserProvider::class,
+
+
+        /*
          * Package Service Providers...
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,

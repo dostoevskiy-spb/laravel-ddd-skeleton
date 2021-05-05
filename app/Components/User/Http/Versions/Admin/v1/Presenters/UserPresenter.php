@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Http\Versions\v1\Presenters;
+namespace Components\User\Http\Versions\Admin\v1\Presenters;
 
-use Common\Presenters\JsonPresenter;
+use App\Components\User\Enums\UserEntityEnum;
+use Common\Presenters\SimplePresenter;
 use Components\User\User;
 
-class UserPresenter extends JsonPresenter
+class UserPresenter extends SimplePresenter
 {
     /**
      * @var User
@@ -23,6 +24,7 @@ class UserPresenter extends JsonPresenter
     {
         return [
             'message' => 'Current authenticated user.',
+            'is_admin' => $this->user->entity_id === UserEntityEnum::ID_ADMIN,
             'data' => $this->user,
         ];
     }
