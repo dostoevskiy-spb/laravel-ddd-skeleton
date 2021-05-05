@@ -1,11 +1,11 @@
 <?php
 
-namespace Components\User\Common\Traits;
+namespace Components\User\Traits;
 
 use Common\Helpers\PasswordHelper;
-use Components\User\Common\Interfaces\UserServiceInterface;
-use Components\User\Common\Models\Status;
-use Components\User\Common\Repositories\UserRepository;
+use Components\User\Interfaces\UserServiceInterface;
+use Components\User\Models\Status;
+use Components\User\Repositories\UserRepository;
 use Components\User\User;
 
 trait Users

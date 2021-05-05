@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Exceptions;
+namespace Components\User\Exceptions;
 
 use Exception;
 use Throwable;

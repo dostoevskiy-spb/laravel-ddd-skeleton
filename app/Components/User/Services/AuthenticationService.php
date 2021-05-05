@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Services;
+namespace Components\User\Services;
 
-use Components\User\Common\Exceptions\UserBlockedException;
-use Components\User\Common\Interfaces\AuthenticationServiceInterface;
-use Components\User\Common\Interfaces\UserRepositoryInterface;
-use Components\User\Common\Models\Status;
-use Components\User\Common\Traits\Authentication;
+use Components\User\Exceptions\UserBlockedException;
+use Components\User\Interfaces\AuthenticationServiceInterface;
+use Components\User\Interfaces\UserRepositoryInterface;
+use Components\User\Models\Status;
+use Components\User\Traits\Authentication;
 
 class AuthenticationService implements AuthenticationServiceInterface
 {

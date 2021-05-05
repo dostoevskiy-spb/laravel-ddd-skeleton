@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Middleware;
+namespace Components\User\Middleware;
 
 use Closure;
 use Common\Exceptions\HttpUnauthorizedException;
-use Components\User\Common\Facades\Auth;
+use Components\User\Facades\Auth;
 use Exception;
 use Tymon\JWTAuth\Http\Middleware\Authenticate as JWTAuth;
 

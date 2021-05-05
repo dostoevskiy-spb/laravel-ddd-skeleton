@@ -8,7 +8,7 @@ use Common\Middleware\CheckForMaintenanceMode;
 use Common\Middleware\RedirectIfAuthenticated;
 use Common\Middleware\TrimStrings;
 use Common\Middleware\TrustProxies;
-use Components\User\Common\Middleware\Authenticate;
+use Components\User\Middleware\Authenticate;
 use Fruitcake\Cors\HandleCors;
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;

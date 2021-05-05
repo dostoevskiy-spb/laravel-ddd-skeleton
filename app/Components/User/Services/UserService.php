@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Services;
+namespace Components\User\Services;
 
 use Common\Exceptions\HttpUnauthorizedException;
 use Common\Services\BaseService;
-use Components\User\Common\Facades\Auth;
-use Components\User\Common\Interfaces\UserServiceInterface;
-use Components\User\Common\Repositories\UserRepository;
+use Components\User\Facades\Auth;
+use Components\User\Interfaces\UserServiceInterface;
+use Components\User\Repositories\UserRepository;
 use Components\User\User;
 use Tymon\JWTAuth\Exceptions\JWTException;
 

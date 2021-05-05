@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Interfaces;
+namespace Components\User\Interfaces;
 
 interface AuthenticationServiceInterface
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Versions\v1\Controllers;
+namespace Components\User\Http\Versions\v1\Controllers;
 
-use App\Components\User\Versions\v1\Presenters\LogoutPresenter;
+use App\Components\User\Http\Versions\v1\Presenters\LogoutPresenter;
 use Common\Controllers\Controller;
-use Components\User\Common\Interfaces\AuthenticationServiceInterface;
+use Components\User\Interfaces\AuthenticationServiceInterface;
 use Components\User\Versions\v1\Presenters\TokenPresenter;
 use Components\User\Versions\v1\Requests\AuthenticationRequest;
 use Illuminate\Http\JsonResponse;

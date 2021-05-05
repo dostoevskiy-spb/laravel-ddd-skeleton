@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Facades;
+namespace Components\User\Facades;
 
 use Components\User\User;
 use Illuminate\Contracts\Auth\Authenticatable;

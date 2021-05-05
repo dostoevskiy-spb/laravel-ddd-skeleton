@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Models;
+namespace Components\User\Models;
 
 use Common\Models\BaseModel;
 

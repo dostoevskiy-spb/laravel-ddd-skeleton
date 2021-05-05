@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Versions\v1\Tests\Feature;
+namespace Components\User\Http\Versions\v1\Tests\Feature;
 
 use Symfony\Component\HttpFoundation\Response;
 

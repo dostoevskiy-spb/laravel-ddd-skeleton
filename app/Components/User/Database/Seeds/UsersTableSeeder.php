@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Components\User\Database\Seeds;
 
 use Common\Database\Seeds\BaseSeeder;
-use Components\User\Common\Models\Entity;
-use Components\User\Common\Models\Status;
+use Components\User\Models\Entity;
+use Components\User\Models\Status;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 

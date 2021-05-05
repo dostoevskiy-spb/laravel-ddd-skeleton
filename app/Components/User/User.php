@@ -7,7 +7,7 @@ namespace Components\User;
 use Common\Models\AuthEntity;
 use Components\AccountManager\AccountManager;
 use Components\MediaBuyer\MediaBuyer;
-use Components\User\Common\Models\Status;
+use Components\User\Models\Status;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;

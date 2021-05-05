@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Repositories;
+namespace Components\User\Repositories;
 
 use Common\Models\BaseModel;
 use Common\Repositories\EloquentRepository;
-use Components\User\Common\Interfaces\UserRepositoryInterface;
+use Components\User\Interfaces\UserRepositoryInterface;
 use Components\User\User;
 use Illuminate\Database\Eloquent\Builder;
 

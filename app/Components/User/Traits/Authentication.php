@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Common\Traits;
+namespace Components\User\Traits;
 
 use Common\Exceptions\HttpUnauthorizedException;
-use Components\User\Common\Facades\Auth;
+use Components\User\Facades\Auth;
 use Illuminate\Contracts\Auth\Authenticatable;
 
 trait Authentication

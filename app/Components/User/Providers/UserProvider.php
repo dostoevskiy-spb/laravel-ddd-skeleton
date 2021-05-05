@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Components\User\Providers;
 
-use Components\User\Common\Interfaces\AuthenticationServiceInterface;
-use Components\User\Common\Interfaces\UserRepositoryInterface;
-use Components\User\Common\Interfaces\UserServiceInterface;
-use Components\User\Common\Repositories\UserRepository;
-use Components\User\Common\Services\AuthenticationService;
-use Components\User\Common\Services\UserService;
+use Components\User\Interfaces\AuthenticationServiceInterface;
+use Components\User\Interfaces\UserRepositoryInterface;
+use Components\User\Interfaces\UserServiceInterface;
+use Components\User\Repositories\UserRepository;
+use Components\User\Services\AuthenticationService;
+use Components\User\Services\UserService;
 use Illuminate\Support\ServiceProvider;
 
 class UserProvider extends ServiceProvider

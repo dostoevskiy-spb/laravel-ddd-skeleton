@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Components\User\Versions\v1\Presenters;
+namespace Components\User\Http\Versions\v1\Presenters;
 
 use Common\Presenters\JsonPresenter;
 

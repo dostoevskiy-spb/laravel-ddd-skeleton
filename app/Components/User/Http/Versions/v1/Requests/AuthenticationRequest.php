@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Components\User\Versions\v1\Requests;
+namespace Components\User\Http\Versions\v1\Requests;
 
 use Common\Requests\BaseRequest;
 use Components\User\User;
