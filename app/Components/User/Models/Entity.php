@@ -14,12 +14,6 @@ use Common\Models\BaseModel;
  */
 class Entity extends BaseModel
 {
-    public const ID_DEVELOPER= 0;
-    public const ID_ADMIN = 1;
-    public const ID_MASTER = 2;
-    public const ID_ORGANIZATION_OWNER = 3;
-    public const ID_MANAGER = 4;
-
     public $timestamps = false;
 
     protected $table = 'users.entities';
