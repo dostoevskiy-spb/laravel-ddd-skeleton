@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Common\Services;
 
 use Common\Repositories\Interfaces\RepositoryInterface;
+use Components\User\Facades\Auth;
+use Components\User\User;
 use Exception;
 
 abstract class BaseService
@@ -12,13 +14,15 @@ abstract class BaseService
     /**
      * @var RepositoryInterface
      */
-    protected $repository;
+    protected RepositoryInterface $repository;
+    protected User $user;
 
     public function __construct()
     {
         $repositoryClass = $this->getRepository();
 
         $this->repository = new $repositoryClass();
+        $this->user = Auth::user();
     }
 
     public function __call($name, $arguments)

@@ -16,7 +16,7 @@ class BaseSeeder extends Seeder
      *
      * @throws InvalidArgumentException
      */
-    public function __invoke()
+    public function __invoke(array $parameters = [])
     {
         if (!method_exists($this, 'run')) {
             throw new InvalidArgumentException('Method [run] missing from ' . get_class($this));
@@ -27,7 +27,8 @@ class BaseSeeder extends Seeder
                 ? $this->container->call([$this, 'run'])
                 : $this->run();
         } catch (QueryException $exception) {
-            $seeder = class_basename(get_called_class());
+//            dd($exception->getMessage());
+            $seeder = class_basename(static::class);
 
             $this->command->info("$seeder is already seeded");
 
@@ -44,7 +45,7 @@ class BaseSeeder extends Seeder
      * @param  bool  $silent
      * @return $this
      */
-    public function call($class, $silent = false)
+    public function call($class, $silent = false, array $parameters = [])
     {
         $classes = Arr::wrap($class);
 
@@ -57,7 +58,7 @@ class BaseSeeder extends Seeder
                 $this->command->getOutput()->writeln("<comment>Seeding:</comment> {$name}");
             }
 
-            $seeder();
+            $seeder->__invoke($parameters);
         }
 
         return $this;

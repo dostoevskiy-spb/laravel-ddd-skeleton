@@ -43,6 +43,16 @@ abstract class AbstractFactory implements FactoryInterface
         return $this;
     }
 
+    public function generate(int $count): array
+    {
+        $result = [];
+        for($i=1; $i<$count; $i++) {
+            $result[] = $this->getFields();
+        }
+
+        return $result;
+    }
+
     public function make(?array $data = null)
     {
         $this->prepareInstances($data);

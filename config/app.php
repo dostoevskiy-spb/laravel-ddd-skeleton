@@ -1,5 +1,7 @@
 <?php
 
+use Common\Providers\CollectionServiceProvider;
+
 return [
 
     /*
@@ -184,6 +186,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
+        CollectionServiceProvider::class,
 
     ],
 

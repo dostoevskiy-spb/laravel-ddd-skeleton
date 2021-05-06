@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+use Common\Models\BaseModel;
+
+
+class {{ class }} extends BaseModel
+{
+    protected $table = '';
+
+    protected $fillable = [];
+}

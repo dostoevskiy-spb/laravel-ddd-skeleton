@@ -1,0 +1,10 @@
+<?php
+
+use Components\User\Enums\UserEntityEnum;
+use Models\User;
+
+return [
+    'model' => Components\User\User::class,
+    'schema' => 'users',
+    'seeder' => Components\User\Database\Seeds\UserComponentsSeeder::class,
+];

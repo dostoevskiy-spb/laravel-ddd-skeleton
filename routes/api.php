@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace' => 'Components'], function (): void {
     require base_path('app/Components/User/Http/Routes/list.php');
+    require base_path('app/Components/Contractor/Http/Routes/list.php');
 });

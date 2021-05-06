@@ -6,7 +6,11 @@ use InvalidArgumentException;
 
 abstract class AbstractEnum
 {
-    abstract protected static function getEnum(): array;
+    protected static function getEnum(): array
+    {
+        $reflection = new \ReflectionClass(static::class);
+        return array_values($reflection->getConstants());
+    }
 
     public static function getKey(string $value)
     {

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Core\Console;
 
+use Core\Console\Commands\ComponentGenerate;
+use Core\Console\Commands\ComponentsCreate;
 use Core\Console\Commands\ComponentsInit;
 use Core\Console\Commands\ComponentsWipe;
 use Illuminate\Console\Scheduling\Schedule;
@@ -19,6 +21,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         ComponentsInit::class,
         ComponentsWipe::class,
+        ComponentsCreate::class,
+        ComponentGenerate::class,
     ];
 
     /**
