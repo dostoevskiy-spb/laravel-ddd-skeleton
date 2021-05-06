@@ -13,7 +13,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
  *
  * @method static bool|string attempt(array $credentials)
  * @method static parseToken()
- * @method static User fromUser(Authenticatable $user)
+ * @method static string fromUser(Authenticatable $user)
  */
 class Auth extends JWTAuth
 {

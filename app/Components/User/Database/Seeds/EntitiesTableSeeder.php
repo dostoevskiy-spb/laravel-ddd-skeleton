@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Components\User\Database\Seeds;
 
+use App\Components\User\Enums\UserEntityEnum;
 use Common\Database\Seeds\BaseSeeder;
-use Components\User\Models\Entity;
 use Illuminate\Support\Facades\DB;
 
 class EntitiesTableSeeder extends BaseSeeder
@@ -18,23 +18,23 @@ class EntitiesTableSeeder extends BaseSeeder
         DB::table('users.entities')->insert(
             [
                 [
-                    'id'   => Entity::ID_DEVELOPER,
+                    'id'   => UserEntityEnum::ID_DEVELOPER,
                     'name' => 'Разработчик',
                 ],
                 [
-                    'id'   => Entity::ID_ADMIN,
+                    'id'   => UserEntityEnum::ID_ADMIN,
                     'name' => 'Администратор',
                 ],
                 [
-                    'id'   => Entity::ID_MANAGER,
+                    'id'   => UserEntityEnum::ID_MANAGER,
                     'name' => 'Менеджер',
                 ],
                 [
-                    'id'   => Entity::ID_MASTER,
+                    'id'   => UserEntityEnum::ID_MASTER,
                     'name' => 'Мастер',
                 ],
                 [
-                    'id'   => Entity::ID_ORGANIZATION_OWNER,
+                    'id'   => UserEntityEnum::ID_ORGANIZATION_OWNER,
                     'name' => 'Администратор Контрагента',
                 ],
             ]

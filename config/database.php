@@ -15,8 +15,8 @@ return [
     |
     */
     'admin' => [
-        'email' => env('ADMIN_EMAIL', 'lucky@pro.com'),
-        'password' => env('ADMIN_PASSWORD', 'qwerty123')
+        'email' => env('ADMIN_EMAIL', 'dostoevskiy.spb@gmail.com'),
+        'password' => env('ADMIN_PASSWORD', '161090')
     ],
 
     'default' => env('DB_CONNECTION', 'mysql'),

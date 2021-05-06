@@ -11,10 +11,7 @@ use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller
 {
-    /**
-     * @var UserServiceInterface
-     */
-    protected $service;
+    protected UserServiceInterface $service;
 
     /**
      * UserController constructor.

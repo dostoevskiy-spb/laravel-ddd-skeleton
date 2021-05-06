@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-require base_path('app/Components/User/Http/Routes/list.php');
-
+Route::group(['namespace' => 'Components'], function (): void {
+    require base_path('app/Components/User/Http/Routes/list.php');
+});

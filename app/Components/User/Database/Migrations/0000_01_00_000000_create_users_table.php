@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedSmallInteger('status_id');
             $table->unsignedSmallInteger('entity_id');
-            $table->string('login')->unique();
+            $table->string('email')->unique();
             $table->string('password');
 
             $table->foreign('status_id')

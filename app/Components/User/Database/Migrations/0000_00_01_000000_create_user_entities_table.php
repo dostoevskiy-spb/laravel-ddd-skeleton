@@ -15,7 +15,7 @@ class CreateUserEntitiesTable extends Migration
     {
         Schema::create('entities', function (Blueprint $table): void {
             $table->smallIncrements('id');
-            $table->string('name', 20);
+            $table->string('name', 100);
         });
     }
 
