@@ -14,8 +14,6 @@ use Common\Models\BaseModel;
  */
 class Status extends BaseModel
 {
-    public $timestamps = false;
-
     protected $table = 'contractors.statuses';
 
     protected $fillable = [

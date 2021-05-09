@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Components\Contractor\Repositories;
 
-use Common\Models\BaseModel;
 use Common\Repositories\EloquentRepository;
 use Components\Contractor\Contractor;
 use Components\Contractor\Interfaces\ContractorRepositoryInterface;
 use Components\User\User;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 
 /**
  * Class UserRepository
@@ -19,22 +18,18 @@ use Illuminate\Database\Eloquent\Builder;
 class ContractorRepository extends EloquentRepository implements ContractorRepositoryInterface
 {
 
-    /**
-     * @param array $data
-     * @return BaseModel|Contractor|Builder
-     */
-    public function create(array $data): BaseModel
-    {
-        return Contractor::create($data);
-    }
-
     protected function getModel(): string
     {
         return Contractor::class;
     }
 
-    public function getByType(int $types): ?Contractor
+    public function getByType(int $types): Collection
     {
-        // TODO: Implement getByType() method.
+        return $this->getQuery()->whereTypeId($types)->get();
+    }
+
+    public function getByStatus(int $statuses): Collection
+    {
+        return $this->getQuery()->whereStatuses($statuses)->get();
     }
 }

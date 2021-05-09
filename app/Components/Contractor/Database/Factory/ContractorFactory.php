@@ -5,11 +5,9 @@ declare(strict_types=1);
 namespace Components\Contractor\Database\Factory;
 
 use Common\Database\Factory\AbstractFactory;
+use Components\Contractor\Contractor;
 use Components\Contractor\Enums\ContractorStatusEnum;
 use Components\Contractor\Enums\ContractorTypeEnum;
-use Components\Contractor\Models\Type;
-use Components\Contractor\Models\Status;
-use Components\User\User;
 
 class ContractorFactory extends AbstractFactory
 {
@@ -28,6 +26,6 @@ class ContractorFactory extends AbstractFactory
 
     protected function getModel(): string
     {
-        return User::class;
+        return Contractor::class;
     }
 }

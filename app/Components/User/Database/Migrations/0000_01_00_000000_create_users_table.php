@@ -17,12 +17,17 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedSmallInteger('status_id');
             $table->unsignedSmallInteger('entity_id');
+            $table->unsignedInteger('contractor_id');
             $table->string('email')->unique();
             $table->string('password');
 
             $table->foreign('status_id')
                 ->references('id')
                 ->on('statuses');
+
+            $table->foreign('contractor_id')
+                ->references('id')
+                ->on('contractors.contractors');
 
             $table->foreign('entity_id')
                 ->references('id')

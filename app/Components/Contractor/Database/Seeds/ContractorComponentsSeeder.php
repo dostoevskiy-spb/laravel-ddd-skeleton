@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Components\Contractor\Database\Seeds;
 
 use Common\Database\Seeds\BaseSeeder;

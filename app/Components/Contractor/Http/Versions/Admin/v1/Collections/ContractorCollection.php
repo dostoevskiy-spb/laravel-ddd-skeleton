@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Components\Contractor\Http\Versions\Admin\v1\Collections;
 
 use Components\Contractor\Http\Versions\Admin\v1\Resources\ContractorResource;
