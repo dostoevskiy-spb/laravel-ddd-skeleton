@@ -38,8 +38,6 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
 
     /**
      * Get custom messages for validator errors.
-     *
-     * @return array
      */
     public function messages(): array
     {
@@ -48,8 +46,6 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
 
     /**
      * Get custom attributes for validator errors.
-     *
-     * @return array
      */
     public function attributes(): array
     {
@@ -59,9 +55,7 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
     /**
      * Set the container implementation.
      *
-     * @param Container $container
      *
-     * @return $this
      */
     public function setContainer(Container $container): static
     {
@@ -72,7 +66,6 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
     /**
      * Get the validator instance for the request.
      *
-     * @return Validator
      * @throws BindingResolutionException
      */
     protected function getValidatorInstance(): Validator
@@ -91,9 +84,7 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
     /**
      * Create the default validator instance.
      *
-     * @param ValidationFactory $factory
      *
-     * @return Validator
      */
     protected function createDefaultValidator(ValidationFactory $factory): Validator
     {
@@ -107,8 +98,6 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
 
     /**
      * Get data to be validated from the request.
-     *
-     * @return array
      */
     protected function validationData(): array
     {
@@ -118,9 +107,7 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
     /**
      * Handle a failed validation attempt.
      *
-     * @param Validator $validator
      *
-     * @return void
      * @throws ValidationException
      */
     protected function failedValidation(Validator $validator): void
@@ -131,9 +118,7 @@ abstract class AbstractRequest extends Request implements ValidatesWhenResolved
     /**
      * Format the errors from the given Validator instance.
      *
-     * @param Validator $validator
      *
-     * @return JsonResponse
      */
     protected function formatErrors(Validator $validator): JsonResponse
     {

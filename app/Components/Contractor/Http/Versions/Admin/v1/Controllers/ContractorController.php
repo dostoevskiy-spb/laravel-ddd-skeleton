@@ -22,8 +22,6 @@ class ContractorController extends Controller
 
     /**
      * UserController constructor.
-     *
-     * @param ContractorService|ContractorRepository $service
      */
     public function __construct(ContractorRepository|ContractorService $service)
     {
@@ -36,10 +34,7 @@ class ContractorController extends Controller
     /**
      * Get all contractors
      *
-     * @param GetContractorRequest $request
-     * @param int                  $contractorId
      *
-     * @return ContractorResource
      */
     public function get(GetContractorRequest $request, int $contractorId): ContractorResource
     {
@@ -48,8 +43,6 @@ class ContractorController extends Controller
 
     /**
      * Get all contractors
-     *
-     * @return ContractorCollection
      */
     public function list(): ContractorCollection
     {
@@ -59,10 +52,7 @@ class ContractorController extends Controller
     /**
      * Get all contractors
      *
-     * @param UpdateContractorRequest $request
-     * @param int                     $contractorId
      *
-     * @return ContractorResource
      */
     public function update(UpdateContractorRequest $request, int $contractorId): ContractorResource
     {
@@ -85,9 +75,7 @@ class ContractorController extends Controller
     /**
      * Get all contractors
      *
-     * @param CreateContractorRequest $request
      *
-     * @return ContractorResource
      */
     public function create(CreateContractorRequest $request): ContractorResource
     {
@@ -109,10 +97,7 @@ class ContractorController extends Controller
     /**
      * Get all contractors
      *
-     * @param DeleteContractorRequest $request
-     * @param int                  $contractorId
      *
-     * @return JsonResponse
      */
     public function delete(DeleteContractorRequest $request, int $contractorId): JsonResponse
     {

@@ -14,7 +14,6 @@ class ContractorCollection extends ResourceCollection
 
     /**
      * @param null $request
-     * @return Collection
      */
     public function toArray($request): Collection
     {

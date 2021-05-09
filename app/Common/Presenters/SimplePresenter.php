@@ -15,8 +15,6 @@ abstract class SimplePresenter
 
     /**
      * Response structure
-     *
-     * @return array
      */
     abstract protected function getPresentationData(): array;
 }

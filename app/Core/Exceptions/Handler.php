@@ -56,7 +56,7 @@ class Handler extends ExceptionHandler
     {
         $code = $exception->getCode();
 
-        if (empty($code) || (is_numeric($code) === false)) {
+        if (empty($code) || (!is_numeric($code))) {
             return Response::HTTP_INTERNAL_SERVER_ERROR;
         }
 

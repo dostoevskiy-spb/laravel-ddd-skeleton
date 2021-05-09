@@ -27,7 +27,7 @@ abstract class BaseService
 
     public function __call($name, $arguments)
     {
-        if ($this->isMethodExist($name) === false) {
+        if (!$this->isMethodExist($name)) {
             if ($this->isMethodExistInRepository($name)) {
                 return $this->repository->{$name}(...$arguments);
             }

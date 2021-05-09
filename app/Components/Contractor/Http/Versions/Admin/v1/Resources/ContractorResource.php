@@ -11,11 +11,6 @@ class ContractorResource extends JsonResource
 {
     /**
      * @param null $request
-
-     * @uses Country::$name_ru
-     * @uses Country::$name_en
-     *
-     * @return array
      */
     public function toArray($request): array
     {

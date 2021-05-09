@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Common\Presenters;
 
 use Common\Presenters\Interfaces\PresenterInterface;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 
 abstract class CollectionPresenter implements PresenterInterface
@@ -49,13 +50,10 @@ abstract class CollectionPresenter implements PresenterInterface
 
     /**
      * BannedAccountsPresenter constructor.
-     *
-     * @param Collection|null $collection
-     * @param array|null $pagination
      */
     public function __construct(?Collection $collection = null, ?array $pagination = null)
     {
-        if ($this->pagination === false) {
+        if (!$this->pagination) {
             $this->collection = $collection;
 
             return;
@@ -76,11 +74,7 @@ abstract class CollectionPresenter implements PresenterInterface
     /**
      * Make paginated collection
      *
-     * @param Collection $collection
-     * @param int $page
-     * @param int $perPage
      *
-     * @return Collection
      */
     protected function paginate(Collection $collection, int $page, int $perPage): Collection
     {
@@ -102,7 +96,7 @@ abstract class CollectionPresenter implements PresenterInterface
     {
         $presentationData = $this->getPresentationData();
 
-        if ($this->pagination !== false) {
+        if ($this->pagination) {
             $presentationData['pagination'] = [
                 'current_page' => $this->currentPage,
                 'elements_count' => $this->elementsCount,

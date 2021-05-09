@@ -209,7 +209,7 @@ class Browser
 
         $responseBody = $this->getResponse();
 
-        if (empty($responseBody) === false) {
+        if (!empty($responseBody)) {
             libxml_use_internal_errors(true);
             $this->dom->loadHTML($responseBody);
             libxml_use_internal_errors(false);

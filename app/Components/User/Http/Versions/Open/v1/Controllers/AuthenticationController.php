@@ -25,9 +25,6 @@ class AuthenticationController extends Controller
 
     /**
      * Authenticate user uses jwt token
-     *
-     * @param AuthenticationRequest $request
-     * @return JsonResponse
      */
     public function login(AuthenticationRequest $request): JsonResponse
     {
@@ -39,8 +36,6 @@ class AuthenticationController extends Controller
 
     /**
      * Log user out
-     *
-     * @return JsonResponse
      */
     public function logout(): JsonResponse
     {
